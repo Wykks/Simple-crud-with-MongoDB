@@ -1,0 +1,47 @@
+<h2 class="text-center">User list</h2>
+<div class="row">
+    <div class="col-sm-6 col-md-4" data-ng-repeat="user in users track by user._id">
+        <div class="user thumbnail" data-user-id="{{ user.id }}">
+            <div class="caption">
+                <h3 contentEditable="true" class="single-line" data-ng-model="user.login">{{ user.login }}</h3>
+                <div data-ng-if="user.address">
+                    <p>
+                        <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
+                        <span class="sr-only">Address:</span>
+                        <span title="Click to edit" data-ng-model="user.address" class="single-line" contentEditable="true"></span>
+                    </p>
+                </div>
+                <div data-ng-if="user.phone">
+                    <p>
+                        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                        <span class="sr-only">Phone:</span>
+                        <span title="Click to edit" data-ng-model="user.phone" class="single-line" contentEditable="true"></span>
+                    </p>
+                </div>
+                <div data-ng-if="user.email">
+                    <p>
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        <span class="sr-only">Mail:</span>
+                        <span title="Click to edit" data-ng-model="user.email" class="single-line" contentEditable="true"></span>
+                    </p>
+                </div>
+                <div data-ng-repeat="customField in user.customFields">
+                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> {{ customField.fieldName }}:
+                    <p title="Click to edit" data-ng-model="customField.value" class="single-line" contentEditable="true"></p>
+                </div>
+                <div data-ng-if="user.custom">
+                    <h5>
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                        Additionnal information:
+                    </h5>
+                    <p title="Click to edit" data-ng-model="user.custom" contentEditable="true"></p>
+                </div>
+                <input class="userPassord" data-ng-model="user.pass" name="password" type="password" placeholder="Change password">
+                <p class="usercontrol">
+                    <a data-ng-click="deleteUser(user, $index)" class="btn btn-danger" role="button">Delete</a>
+                    <a data-ng-click="updateUser(user)" class="btn btn-primary" role="button">Save</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

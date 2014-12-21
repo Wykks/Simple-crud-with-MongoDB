@@ -1,0 +1,10 @@
+<section id="formType">
+    <h2 class="text-center">New User</h2>
+    <div class="btn-group btn-group-justified">
+        <a data-ui-sref-active="active" data-ui-sref="admin.addRegularUser" class="btn btn-default" role="button">Regular User</a>
+        <a data-ui-sref-active="active" data-ui-sref="admin.addFullUser" class="btn btn-default" role="button">Full User</a>
+        <a data-ui-sref-active="active"data-ui-sref="admin.addCustomUser" class="btn btn-default" role="button">Full + Custom User</a>
+    </div>
+</section>
+<section id="form" data-ui-view></section>
+<section id="user-list" data-ng-include="'templates/userList.html'"></section>

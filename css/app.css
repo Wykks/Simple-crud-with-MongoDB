@@ -1,0 +1,55 @@
+body {
+    background: #eeeeee;
+}
+.panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }
+a#title, a#title:link {
+    text-decoration: none;
+    color: #000000;
+}
+div#home {
+    margin-top: 20px;
+}
+div#map {
+    margin-top: 10px;
+    height: 600px;
+}
+div#content {
+    padding-bottom: 10px;
+    background: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    -ms-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+}
+header {
+    margin-bottom: 20px;
+}
+div[contentEditable] {
+    cursor: pointer;
+}
+label[contentEditable] {
+    cursor: text;
+}
+[contenteditable="true"].single-line {
+    white-space: nowrap;
+    width:200px;
+    overflow: hidden;
+}
+[contenteditable="true"].single-line br {
+    display:none;
+
+}
+[contenteditable="true"].single-line * {
+    display:inline;
+    white-space:nowrap;
+}
+.usercontrol {
+    margin-top: 10px;
+}
+.userPassword {
+	margin-top: 10px;
+}
+.addCustomFieldButton {
+    margin-bottom: 10px;
+}

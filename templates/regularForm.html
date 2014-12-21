@@ -1,0 +1,11 @@
+<form name="regularForm" role="form">
+    <div class="form-group">
+        <label for="username">Login</label>
+        <input data-ng-model="user.login" name="username" type="text" class="form-control" id="login" placeholder="Enter your login" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input data-ng-model="user.pass" name="password" type="password" class="form-control" id="password" placeholder="Enter your password" required>
+    </div>
+    <button data-ng-disabled="regularForm.$invalid" data-ng-click="addUser()" type="submit" class="btn btn-default">Submit</button>
+</form>

@@ -1,0 +1,21 @@
+<form name="customForm" role="form">
+    <div class="form-group">
+        <label>Login</label>
+        <input data-ng-model="user.login" type="text" class="form-control" id="login" placeholder="Enter your login" required>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input data-ng-model="user.pass" type="password" class="form-control" id="password" placeholder="Enter your password" required>
+    </div>
+    <div data-ng-include="'templates/additionnalFields.html'"></div>
+    <div class="form-group" data-ng-repeat="customField in user.customFields">
+        <label title="Click to edit" data-ng-model="customField.fieldName" contentEditable="true" class="single-line"></label>
+        <input data-ng-model="customField.value" type="text" class="form-control" placeholder="Enter something">
+    </div>
+    <button data-ng-click="addFormGroup()" class="btn btn-default addCustomFieldButton" formnovalidate>Add one field</button>
+    <div class="form-group">
+        <label>Additional informations</label>
+        <textarea data-ng-model="user.custom" class="form-control" rows="3"></textarea>
+    </div>
+    <button data-ng-disabled="customForm.$invalid" data-ng-click="addUser()" type="submit" class="btn btn-default">Submit</button>
+</form>
